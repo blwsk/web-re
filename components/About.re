@@ -3,7 +3,7 @@ type state = {
   text: string,
 };
 
-let component = ReasonReact.statefulComponent "Index";
+let component = ReasonReact.statefulComponent "About";
 
 let make _children => {
   let handleClick = fun _event {ReasonReact.state} => ReasonReact.Update
