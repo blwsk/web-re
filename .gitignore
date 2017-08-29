@@ -1,0 +1,7 @@
+bs
+.merlin
+
+node_modules/
+.next/
+.npmrc
+lib/

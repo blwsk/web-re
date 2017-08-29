@@ -1,0 +1,40 @@
+{
+  "name": "web-re",
+  "version": "0.0.0",
+  "scripts": {
+    "buckle:dev": "bsb -make-world -w",
+    "buckle:compile": "bsb -make-world",
+    "next:dev": "next -w",
+    "next:build": "next build",
+    "next:start": "next start -w",
+    "dev": "concurrently \"npm run buckle:dev\" \"npm run next:dev\"",
+    "start": "rimraf lib && npm run buckle:compile && npm run next:build"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "autoprefixer": "^7.1.2",
+    "babel-plugin-bucklescript": "^0.2.3-1",
+    "babel-plugin-module-resolver": "^2.7.1",
+    "babel-plugin-wrap-in-js": "^1.1.1",
+    "bs-platform": "^1.9.0",
+    "concurrently": "^3.5.0",
+    "glob": "^7.1.2",
+    "next": "^2.4.7",
+    "postcss-easy-import": "^2.1.0",
+    "postcss-loader": "^2.0.6",
+    "raw-loader": "^0.5.1",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "reason-react": "^0.2.3",
+    "rimraf": "^2.6.1",
+    "tachyons": "4.8.0"
+  },
+  "babel": {
+    "presets": [
+      "next/babel"
+    ],
+    "plugins": [
+      "babel-plugin-bucklescript"
+    ]
+  }
+}
