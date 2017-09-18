@@ -21,3 +21,12 @@ module Head: {
     array ReasonReact.reactElement =>
     ReasonReact.component ReasonReact.stateless ReasonReact.noRetainedProps;
 };
+
+module StyledJsx: {
+  external style : ReasonReact.reactClass = "default" [@@bs.module "styled-jsx/style"];
+  let make:
+    global::bool =>
+    css::'a =>
+    array ReasonReact.reactElement =>
+    ReasonReact.component ReasonReact.stateless ReasonReact.noRetainedProps;
+};

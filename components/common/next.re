@@ -33,3 +33,30 @@ module Head = {
   let make children =>
     ReasonReact.wrapJsForReason reactClass::head props::(Js.Obj.empty ()) children;
 };
+
+module StyledJsx = {
+  external style : ReasonReact.reactClass = "default" [@@bs.module "styled-jsx/style"];
+
+  type counter = { mutable num: int };
+  let idCounter: counter = { num: 0 };
+  
+  let makeStyleId isGlobal => {
+    let newId = "scoped-" ^ string_of_int idCounter.num;
+    idCounter.num = idCounter.num + 1;
+    isGlobal ? "global" : newId
+  };
+
+  let make ::global ::css => {
+    let styleId = makeStyleId(global);
+    let cssToPass = css;
+
+    ReasonReact.wrapJsForReason
+      reactClass::style
+      props::(
+        {
+          "styleId": styleId,
+          "css": cssToPass,
+        }
+      );
+  }
+};

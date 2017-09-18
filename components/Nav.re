@@ -7,16 +7,24 @@ let make _children => {
     ...component,
     render: fun _self => {
       <div>
-         <Link href="/" prefetch=(Js.Boolean.to_js_boolean true)> 
+        <Link href="/" prefetch=(Js.true_)>
           <a>
             (ReasonReact.stringToElement "index")
           </a>
         </Link>
-         <Link href="/about" prefetch=(Js.Boolean.to_js_boolean true)> 
+        <Link href="/about" prefetch=(Js.true_)>
           <a>
             (ReasonReact.stringToElement "about")
           </a>
         </Link>
+        <StyledJsx
+          global=false
+          css=("
+            html {
+              color: teal;
+            }
+          ")
+        />
       </div>
     } 
   }

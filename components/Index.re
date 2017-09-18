@@ -22,7 +22,7 @@ let make _children => {
       let buttonText = "Clicked me " ^ (string_of_int self.state.count) ^ " times";
       let stringLengthText = "Length of input string: " ^ (string_of_int (String.length self.state.text));
 
-      <div>
+      <Layout>
         <Nav />
         <UIButton
           use="primary"
@@ -33,7 +33,7 @@ let make _children => {
         <div>
           (ReasonReact.stringToElement stringLengthText)
         </div>
-      </div>
+      </Layout>
     } 
   }
 };
