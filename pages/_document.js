@@ -7,6 +7,13 @@ export default class Document extends NextDocument {
       <html>
         <Head>
           <style dangerouslySetInnerHTML={{ __html: tachyons }} />
+          <script
+            type="text/javascript"
+            id="hs-script-loader"
+            src="//js.hs-scripts.com/1653271.js"
+            async
+            defer
+          />
         </Head>
         <body className='sans-serif'>
           <Main />
