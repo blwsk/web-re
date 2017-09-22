@@ -1,14 +1,11 @@
 {
   "name": "web-re",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "scripts": {
     "buckle:dev": "bsb -make-world -w",
-    "buckle:compile": "bsb -make-world",
     "next:dev": "next -w",
-    "next:build": "next build",
-    "next:start": "next start -w",
     "dev": "concurrently \"npm run buckle:dev\" \"npm run next:dev\"",
-    "start:hmm": "rimraf lib && npm run buckle:compile && npm run next:build",
+
     "build": "next build",
     "start": "next start -w"
   },
