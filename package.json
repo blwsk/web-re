@@ -8,7 +8,8 @@
     "next:build": "next build",
     "next:start": "next start -w",
     "dev": "concurrently \"npm run buckle:dev\" \"npm run next:dev\"",
-    "start": "rimraf lib && npm run buckle:compile && npm run next:build"
+    "start:hmm": "rimraf lib && npm run buckle:compile && npm run next:build",
+    "start": "next build && next start"
   },
   "license": "MIT",
   "dependencies": {

@@ -4,6 +4,5 @@ bs
 node_modules/
 .next/
 .npmrc
-lib/
 
 yarn-error.log
